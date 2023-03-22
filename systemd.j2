@@ -1,0 +1,11 @@
+[Unit]
+Description=File Puller
+After=network.target
+
+[Service]
+Type=simple
+User={{ ansible_user }}
+ExecStart=/usr/bin/clear && /usr/bin/python3 /home/{{ ansible_user }}/sotc/file_pull.py
+
+[Install]
+WantedBy=multi-user.target
