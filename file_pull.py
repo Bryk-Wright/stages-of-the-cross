@@ -23,8 +23,8 @@ def download():
 
         # debugging
         # print(url)
-        out = proc.communicate() # proc is the subprecess.Popen function.
-        print(out)
+    out = proc.communicate() # proc is the subprocess.Popen function.
+    print(out)
 
     # debugging
     # print(BASE_URL)
