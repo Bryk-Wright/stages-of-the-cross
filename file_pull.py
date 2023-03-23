@@ -18,13 +18,13 @@ def download():
 
     for present in files:
         url = BASE_URL + present
-        proc = subprocess.Popen(['wget','-np','-nH','--cut-dirs=1','-P',OUTPUT_DIRECTORY, url],
+        proc = subprocess.run(['wget','-np','-nH','--cut-dirs=1','-P',OUTPUT_DIRECTORY, url],
                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
         # debugging
         # print(url)
-out = proc.communicate() # proc is the subprocess.Popen function.
-print(out)
+        out = proc.communicate() # proc is the subprocess.Popen function.
+        print(out)
 
     # debugging
     # print(BASE_URL)
