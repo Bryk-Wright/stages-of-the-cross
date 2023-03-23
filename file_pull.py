@@ -23,12 +23,12 @@ def download():
 
         # debugging
         # print(url)
-    out = proc.communicate() # proc is the subprocess.Popen function.
-    print(out)
 
     # debugging
     # print(BASE_URL)
     # print(out)
     # print(err)
+out = proc.communicate() # proc is the subprocess.Popen function.
+print(out)
 
 download()
