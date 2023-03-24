@@ -6,7 +6,7 @@ amixer -c $DEVICE_NUMBER set Speaker 50% > /dev/null # set speaker output volume
 
 cvlc --quiet --no-osd -L -f --audio-visual visual --effect-list dummy /tmp/music.wav 2> /dev/null & # starts playing background music
 
-clear
+# clear
 
 while true; do
 perl -e 'use POSIX; tcflush(0, TCIFLUSH);' # flushes keyboard inputs from previous loops
@@ -23,12 +23,12 @@ if [ "$input" = "b" ]; then
         # echo "play narration"
         cvlc --quiet --no-osd -f /tmp/video.m4v vlc://quit 2> /dev/null # play voice over file
 
-        clear
+        # clear
 
         # echo "bgm"
         cvlc --quiet --no-osd -L -f --audio-visual visual --effect-list dummy /tmp/music.wav 2> /dev/null & # start bgm again
 
-        clear
+        # clear
 
 fi
 
